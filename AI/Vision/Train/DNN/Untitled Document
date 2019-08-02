@@ -1,0 +1,27 @@
+1. Coloque as imagens que serão analisadas na pasta `imagens para classificar` e os vídeos na pasta` Vídeos`.
+
+2. Execute o programa `extratc.py`, que pode ser executado pelo comando * python extract.py *, no console.
+        Este programa obterá quadros de todos os vídeos no diretório de vídeos e os enviará para a pasta `imagens para classificar`. Depois que esse processo for concluído, todos os vídeos serão excluídos.
+
+3. Execute o programa `check.py`, que pode ser executado pelo comando * python check.py *, no console.
+        Uma nova janela aparecerá, na qual você poderá ver todas as marcas nas imagens atribuídas pelo programa, que são armazenadas na pasta `annotations DNN`.
+        Para começar, é necessário clicar em "Open Dir", seguido por "open" na nova janela que irá aparecer. Não é necessário se preocupar com o diretório, pois ele sempre abrirá no caminho certo.
+Selecione a opção Change Save Dir e escolha a pasta "annotations" para salvar os bookmarks.
+        Uma lista de 5 imagens será mostrada, e todas as respectivas atribuições feitas pelo software, você pode rolar pelas imagens pressionando as teclas `A` e` D`.
+        No caso de uma marca ter sido feita erroneamente, você pode clicar com o botão esquerdo sobre ela e pressionar delete para excluí-la.
+        Caso algo falte no software, você pode pressionar a tecla `w` e selecionar seu atributo.
+        Você também pode ajustar o deslocamento da marca, ou o seu tamanho, movendo seus cantos, é aconselhável para marcar exatamente o que se pretende, sem excessos na marca.
+        Para evitar ter que salvar após cada mudança de imagem, é possível selecionar a opção "Auto saving" no menu "view".
+        Após a revisão ser concluída, feche o programa e uma mensagem no console permitirá que você continue marcando novas 5 imagens ou finalize esse processo.
+        Uma vez feito o treinamento pelo usuário, as imagens analisadas serão movidas para a pasta `imagesTrain`.
+        Todas as alterações feitas pelo usuário são armazenadas na pasta `annotations`.
+
+4. Execute o programa `treinando_rede.sh`, que pode ser executado pelo comando *. / Treinando_rede.sh *, no console.
+        Aqui é onde o aprendizado acontece, baseado nas marcações, o software executará uma série de iterações que convergirão para uma saída melhor.
+        Devido ao alto número de iterações, é recomendável interromper o processo após o devido tempo.
+Se você já rodou este programa e deseja fazer um novo treinamento, é importante excluir a pasta `Models`.
+
+5. Execute o programa `zipNetwork.sh`, que pode ser executado pelo comando *. / ZipNetwork.sh *, no console.
+
+6. Para testar a rede treinada, é importante excluir a pasta `annotationsDNN` e executar o` extract.py` novamente.
+Desta forma, o programa utilizará novas imagens e criará as etiquetas, após criar uma nova pasta `annotationsDNN`.

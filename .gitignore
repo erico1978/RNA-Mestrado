@@ -1,0 +1,71 @@
+
+*.pyc
+
+*.so
+
+env/
+build/
+
+
+
+AI/Vision/Train/DNN/Videos/*
+!AI/Vision/Train/DNN/Videos/README.md
+
+
+AI/Vision/Train/DNN/imagensTrain/*.jpg
+AI/Vision/Train/DNN/imagens\ to\ classify/*.jpg
+AI/Vision/Train/DNN/extrair\ imagens/*
+AI/Vision/Train/DNN/Dataset\ IC/*
+AI/Vision/Train/DNN/annotations DNN/*.xml
+AI/Vision/Train/DNN/annotations/*.xml
+AI/Vision/Train/DNN/old/*
+AI/Vision/Train/DNN/redes_IC/*
+AI/Vision/Train/DNN/TREINAMENTO_IC/*
+
+
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+*~
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.xml
+*,cover
+.hypothesis/
+*.idea
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+#Ipython Notebook
+.ipynb_checkpoints
