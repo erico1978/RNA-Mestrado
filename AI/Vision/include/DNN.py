@@ -185,6 +185,7 @@ class DNN(BasicProcesses):
     # .
     def __detectDNN(self, img):
         # Actual detection.
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         image_np_expanded = np.expand_dims(img, axis=0)
         (boxes, scores, classes, num) = self.__sess.run(
             [self.__detectionboxes, self.__detectionscores, self.__detectionclasses, self.__numdetections],
@@ -231,7 +232,7 @@ class DNN(BasicProcesses):
         objects, observation['frame'] = self.__detectDNN(observation['frame'])
 
         if self._args.dnn == True:
-            cv2.imshow('DNN - Parameters', observation['frame'])
+            cv2.imshow('DNN - Parameters', cv2.cvtColor(observation['frame'], cv2.COLOR_BGR2RGB))
             if cv2.waitKey(1) == ord('q'):
                 raise VisionException(5, 'DNN')
 
